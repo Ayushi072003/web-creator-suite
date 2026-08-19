@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VOLT | Gear Up. Play Hard.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Announcement -->
+<div class="announce">
+  <div class="container">
+    <span><span class="eyebrow-icon">⚡</span> Free Express Delivery on orders over $99</span>
+    <span class="mid">10% OFF YOUR FIRST ORDER — CODE: <strong id="copyCode" title="Click to copy coupon code">VOLT10</strong></span>
+    <span>↺ 30-Day Pro Athlete Trial Guarantee</span>
+  </div>
+</div>
+
+<!-- Header -->
+<header id="main-header">
+  <div class="nav">
+    <a href="#" class="logo">VOLT<span>GEAR</span><small>EQUIP YOUR BEST</small></a>
+    <nav class="navlinks">
+      <a href="#" class="active">Shop</a>
+      <a href="#disciplines">Sports</a>
+      <a href="#categories">Categories</a>
+      <a href="#bestsellers">Best Sellers</a>
+      <a href="#campaign">Pro Tech</a>
+      <a href="#athletes">Athletes</a>
+      <a href="#deals">Deals</a>
+    </nav>
+    <div class="navicons">
+      <button aria-label="Search" id="openSearchBtn" title="Search Gear (Ctrl+K)">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      </button>
+      <button aria-label="Wishlist" class="wish-badge" id="openWishlistBtn" title="View Wishlist">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        <div class="badge-count" id="wishCount">0</div>
+      </button>
+      <button aria-label="Account" id="openAuthBtn" title="Athlete Account">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6"/></svg>
+      </button>
+      <button aria-label="Cart" class="cart-badge" id="openCartBtn" title="View Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        <div class="badge-count" id="cartCount">0</div>
+      </button>
+      <button class="burger" id="burgerBtn" aria-label="Open Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-close" id="mobileClose">&times;</div>
+  <a href="#" class="mobile-link">Shop</a>
+  <a href="#disciplines" class="mobile-link">Sports</a>
+  <a href="#categories" class="mobile-link">Categories</a>
+  <a href="#bestsellers" class="mobile-link">Best Sellers</a>
+  <a href="#campaign" class="mobile-link">Pro Tech</a>
+  <a href="#athletes" class="mobile-link">Athletes</a>
+  <a href="#deals" class="mobile-link">Deals</a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-slide">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80" alt="Stadium Atmosphere">
+    </div>
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="eyebrow-icon">⚡</span> Engineered for Peak Performance</p>
+      <h1>GEAR UP.<span class="accent">PLAY HARD.</span></h1>
+      <p>Pro-grade sports equipment designed for elite athletes and everyday champions. Dominate the court, turf, gym, and track.</p>
+      <div class="btnrow">
+        <a href="#bestsellers" class="btn btn-solid">Shop Best Sellers</a>
+        <a href="#disciplines" class="btn btn-outline">Explore All Sports</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-art-box" id="hero3dCard" onclick="openQuickView('p1')">
+        <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=900&q=80" alt="Pro Football Cleats">
+        <div class="hero-floating-stat">
+          <div class="icon-circle">⚡</div>
+          <div>
+            <h4 style="font-size:13.5px;font-weight:800;">Apex Edition Cleats</h4>
+            <p style="font-size:12px;color:var(--lime);font-weight:700;">
+              +<span class="counter" data-target="24">0</span>% Traction &amp; Speed
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Banner -->
+<section class="trust">
+  <div class="container">
+    <div class="trust-item reveal">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg>
+      <div><h4>Free Express Shipping</h4><p>On orders above $99</p></div>
+    </div>
+    <div class="trust-item reveal" style="transition-delay:0.1s">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5z"/></svg>
+      <div><h4>100% Pro Authenticity</h4><p>Certified tournament gear</p></div>
+    </div>
+    <div class="trust-item reveal" style="transition-delay:0.2s">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>
+      <div><h4>Heavy-Duty Warranty</h4><p>Built for tough training</p></div>
+    </div>
+    <div class="trust-item reveal" style="transition-delay:0.3s">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+      <div><h4>30-Day Hassle-Free</h4><p>Quick exchange &amp; returns</p></div>
+    </div>
+    <div class="trust-item reveal" style="transition-delay:0.4s">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11a9 9 0 0 1 18 0v6a2 2 0 0 1-2 2h-1v-7h3M3 11h3v7H5a2 2 0 0 1-2-2z"/></svg>
+      <div><h4>Athlete Support</h4><p>Expert gear advisors</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Shop By Discipline Bento Showcase -->
+<section class="section" id="disciplines">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-icon">⚡</span> Disciplines</p>
+      <h2>Choose Your Arena</h2>
+      <p class="desc">Engineered specifically for your chosen sport. Built for power, speed, and endurance.</p>
+    </div>
+    
+    <div class="sport-bento">
+      <div class="bento-card tall reveal" onclick="filterBySport('Football')">
+        <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=80" alt="Football / Soccer">
+        <div class="bento-content">
+          <span>Match &amp; Turf</span>
+          <h3>Football</h3>
+        </div>
+      </div>
+      <div class="bento-card wide reveal" style="transition-delay:0.1s" onclick="filterBySport('Basketball')">
+        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=1000&q=80" alt="Basketball Slam Dunk">
+        <div class="bento-content">
+          <span>Court Dominance</span>
+          <h3>Basketball</h3>
+        </div>
+      </div>
+      <div class="bento-card reveal" style="transition-delay:0.2s" onclick="filterBySport('Running')">
+        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=600&q=80" alt="Track Sprint Runner">
+        <div class="bento-content">
+          <span>Speed &amp; Pace</span>
+          <h3>Running</h3>
+        </div>
+      </div>
+      <div class="bento-card reveal" style="transition-delay:0.25s" onclick="filterBySport('Fitness')">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Strength and Gym Training">
+        <div class="bento-content">
+          <span>Iron &amp; Power</span>
+          <h3>Gym &amp; Fitness</h3>
+        </div>
+      </div>
+      <div class="bento-card reveal" style="transition-delay:0.3s" onclick="filterBySport('Combat')">
+        <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=600&q=80" alt="Boxing and Combat">
+        <div class="bento-content">
+          <span>Fight &amp; Strike</span>
+          <h3>Combat &amp; MMA</h3>
+        </div>
+      </div>
+      <div class="bento-card wide reveal" style="transition-delay:0.35s" onclick="filterBySport('Tennis')">
+        <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1000&q=80" alt="Tennis Match Server">
+        <div class="bento-content">
+          <span>Racket Sports</span>
+          <h3>Tennis &amp; Padel</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories Circular Icons -->
+<section class="section section-alt" id="categories">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-icon">⚡</span> Quick Browse</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(22px,3vw,30px);margin-top:6px;text-transform:uppercase;">Gear Categories</h2>
+      </div>
+      <a class="viewall" href="#bestsellers" onclick="filterBySport('All')">View All 16+ Pro Items <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    
+    <div class="cats">
+      <div class="cat-card reveal" onclick="filterBySport('Football')">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=300&q=80" alt="Football Gear"></div>
+        <h4>Football</h4><span>180+ Items</span>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:0.05s" onclick="filterBySport('Basketball')">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=300&q=80" alt="Basketball Gear"></div>
+        <h4>Basketball</h4><span>120+ Items</span>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:0.1s" onclick="filterBySport('Running')">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80" alt="Running Shoes"></div>
+        <h4>Running</h4><span>240+ Items</span>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:0.15s" onclick="filterBySport('Fitness')">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?auto=format&fit=crop&w=300&q=80" alt="Fitness Training Gear"></div>
+        <h4>Fitness</h4><span>310+ Items</span>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:0.2s" onclick="filterBySport('Combat')">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=300&q=80" alt="Combat MMA Gear"></div>
+        <h4>Combat</h4><span>95+ Items</span>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:0.25s" onclick="filterBySport('Tennis')">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1617083934555-563d67b2d55c?auto=format&fit=crop&w=300&q=80" alt="Tennis Gear"></div>
+        <h4>Tennis</h4><span>110+ Items</span>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:0.3s" onclick="filterBySport('Cycling')">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=300&q=80" alt="Cycling Road Gear"></div>
+        <h4>Cycling</h4><span>85+ Items</span>
+      </div>
+      <div class="cat-card reveal" style="transition-delay:0.35s" onclick="filterBySport('Tech')">
+        <div class="cat-img"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Athlete Tech Gear"></div>
+        <h4>Tech &amp; Bags</h4><span>160+ Items</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Best Sellers & Interactive Store -->
+<section class="section" id="bestsellers">
+  <div class="container">
+    <div class="section-head-row reveal">
+      <div>
+        <p class="eyebrow"><span class="eyebrow-icon">⚡</span> Athlete Favorites</p>
+        <h2 style="font-family:var(--font-display);font-size:clamp(24px,3.2vw,32px);margin-top:6px;text-transform:uppercase;">Top Rated Sports Equipment</h2>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-outline btn-sm" onclick="openSizeGuide()">Size Guide</button>
+        <button class="btn btn-outline btn-sm" onclick="openTrackerModal()">Track Order</button>
+      </div>
+    </div>
+
+    <!-- Filter & Sort Bar -->
+    <div class="filter-bar reveal">
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-pill active" data-category="All" onclick="filterBySport('All')">All Sports</button>
+        <button class="filter-pill" data-category="Football" onclick="filterBySport('Football')">Football</button>
+        <button class="filter-pill" data-category="Basketball" onclick="filterBySport('Basketball')">Basketball</button>
+        <button class="filter-pill" data-category="Running" onclick="filterBySport('Running')">Running</button>
+        <button class="filter-pill" data-category="Fitness" onclick="filterBySport('Fitness')">Fitness &amp; Weights</button>
+        <button class="filter-pill" data-category="Combat" onclick="filterBySport('Combat')">Combat MMA</button>
+        <button class="filter-pill" data-category="Tennis" onclick="filterBySport('Tennis')">Tennis</button>
+        <button class="filter-pill" data-category="Cycling" onclick="filterBySport('Cycling')">Cycling</button>
+        <button class="filter-pill" data-category="Tech" onclick="filterBySport('Tech')">Tech &amp; Gear</button>
+      </div>
+      <select class="sort-select" id="sortSelect" onchange="handleSortChange()">
+        <option value="featured">Sort: Featured</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating">Top Rated</option>
+      </select>
+    </div>
+    
+    <!-- Products Dynamic Grid -->
+    <div class="products" id="productGrid">
+      <!-- 16 rich sports products injected dynamically via JavaScript -->
+    </div>
+  </div>
+</section>
+
+<!-- Full-Width High-Impact Campaign Banner -->
+<section class="section" id="campaign" style="padding:20px 0;">
+  <div class="container">
+    <div class="campaign-banner reveal-scale">
+      <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1600&q=80" alt="Athletic Training Session">
+      <div class="campaign-content">
+        <p class="eyebrow"><span class="eyebrow-icon">⚡</span> Pro Athlete Technology</p>
+        <h2>ENGINEERED FOR GREATNESS</h2>
+        <p>Tested in real conditions by world-class athletes. Reinforced materials built to sustain thousands of hours of high-impact gameplay.</p>
+        <a href="#bestsellers" class="btn btn-solid" onclick="filterBySport('All')">Explore Pro Series</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Promo Dual Strips -->
+<section class="section" id="deals">
+  <div class="container">
+    <div class="promos">
+      <div class="promo reveal">
+        <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=80" alt="Weightlifting Gym Athlete">
+        <div class="promo-copy">
+          <p class="eyebrow"><span class="eyebrow-icon">⚡</span> Power &amp; Conditioning</p>
+          <h3>UP TO 30% OFF POWER TRAINING</h3>
+          <a class="btn btn-solid" href="#bestsellers" onclick="filterBySport('Fitness')">Shop Strength Deals</a>
+        </div>
+      </div>
+      <div class="promo reveal" style="transition-delay:0.15s">
+        <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80" alt="Sprint Athlete Runner">
+        <div class="promo-copy">
+          <p class="eyebrow"><span class="eyebrow-icon">⚡</span> Endurance Release</p>
+          <h3>NEW MARATHON &amp; TRACK DROPS</h3>
+          <a class="btn btn-solid" href="#bestsellers" onclick="filterBySport('Running')">Claim Early Access</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Athletes in Action: 8-Photo Community Wall -->
+<section class="section section-alt" id="athletes">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-icon">⚡</span> #VoltAthletes In Action</p>
+      <h2>From The Field To The Podium</h2>
+      <p class="desc">Tag @VoltGear on Instagram for a chance to be featured on our athlete wall.</p>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" onclick="openQuickView('p1')">
+        <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=600&q=80" alt="Soccer Striker Match Goal">
+        <div class="gallery-overlay"><span>@marcus_striker</span><p>Apex Carbon FG Cleats</p></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.05s" onclick="openQuickView('p7')">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=600&q=80" alt="Peloton Road Cycling Race">
+        <div class="gallery-overlay"><span>@elena_velo</span><p>Aero Helmet &amp; Carbon Shoes</p></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.1s" onclick="openQuickView('p5')">
+        <img src="https://images.unsplash.com/photo-1517438322307-e67111335449?auto=format&fit=crop&w=600&q=80" alt="Boxer Heavy Bag Sparring">
+        <div class="gallery-overlay"><span>@tyson_k</span><p>Spartan 16oz Pro Gloves</p></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.15s" onclick="openQuickView('p3')">
+        <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=600&q=80" alt="Trail Marathon Running">
+        <div class="gallery-overlay"><span>@sarah_runs</span><p>Strata Surge Carbon Shoes</p></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.2s" onclick="openQuickView('p2')">
+        <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=600&q=80" alt="Basketball player slam dunk">
+        <div class="gallery-overlay"><span>@jaylen_hoops</span><p>Official Grip Ball &amp; High-Tops</p></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.25s" onclick="openQuickView('p12')">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80" alt="CrossFit Barbell Clean and Jerk">
+        <div class="gallery-overlay"><span>@alex_crossfit</span><p>Olympic Barbell &amp; Plates</p></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.3s" onclick="openQuickView('p6')">
+        <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&w=600&q=80" alt="Tennis Match Server">
+        <div class="gallery-overlay"><span>@novak_fan</span><p>AeroBlade 98 Pro Racket</p></div>
+      </div>
+      <div class="gallery-item reveal" style="transition-delay:0.35s" onclick="openQuickView('p16')">
+        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?auto=format&fit=crop&w=600&q=80" alt="Alpine Trail Hiking Mountaintop">
+        <div class="gallery-overlay"><span>@trail_explorer</span><p>Peak 50L Waterproof Pack</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section testi-wrap">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow"><span class="eyebrow-icon">⚡</span> Athlete Reviews</p>
+      <h2>Trusted by Over <span class="counter" data-target="50000">0</span>+ Athletes</h2>
+    </div>
+    <div class="testis">
+      <div class="testi reveal">
+        <div class="stars">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p>"The football cleats are insanely responsive on turf. Shaved split seconds off my turn times. VOLT is now my entire team's go-to store."</p>
+        <div class="testi-user">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="Rohan M">
+          <div><h5>Rohan Mehta</h5><span>Semi-Pro Footballer</span></div>
+        </div>
+      </div>
+      <div class="testi reveal" style="transition-delay:0.15s">
+        <div class="stars">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p>"Ordered the marathon racing shoes and smashed my 10k PR on the very first weekend run. The energy return is remarkable."</p>
+        <div class="testi-user">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80" alt="Ananya I">
+          <div><h5>Ananya Iyer</h5><span>Marathon Runner</span></div>
+        </div>
+      </div>
+      <div class="testi reveal" style="transition-delay:0.3s">
+        <div class="stars">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4.5L6 21l1.5-7.5L2 9h7z"/></svg>
+        </div>
+        <p>"Ordered the hex dumbbell set and sparring gloves. Packaging was indestructible, delivered in 48 hours, unmatched quality."</p>
+        <div class="testi-user">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Kabir S">
+          <div><h5>Kabir Singh</h5><span>CrossFit Coach</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="section">
+  <div class="container">
+    <div class="news reveal-scale">
+      <p class="eyebrow" style="margin-bottom:8px;"><span class="eyebrow-icon">⚡</span> VIP Drop Squad</p>
+      <h3>NEVER MISS A LIMITED DROP</h3>
+      <p>Join over 100k athletes getting early access to seasonal releases, secret discounts, and pro workouts.</p>
+      <form class="news-form" id="newsletterForm" onsubmit="handleNewsletter(event)">
+        <input type="email" id="newsEmail" placeholder="Enter your athlete email" required>
+        <button class="btn btn-solid" type="submit">Join Squad</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#" class="logo">VOLT<span>GEAR</span></a>
+        <p>The definitive destination for high-performance sports equipment, footwear, and tournament-grade athletic gear.</p>
+        <div class="social">
+          <a href="javascript:void(0)" onclick="showToast('Connecting to VOLT Facebook community...')" aria-label="Facebook"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.6-1.6h1.7V3.3c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.4V13H10v8z"/></svg></a>
+          <a href="javascript:void(0)" onclick="showToast('Connecting to VOLT Instagram athlete wall...')" aria-label="Instagram"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="javascript:void(0)" onclick="showToast('Connecting to VOLT X / Twitter feed...')" aria-label="X"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h3l-7.5 8.6L22 22h-6.9l-5.4-6.6L3.5 22H.5l8-9.2L2 2h7l4.9 6z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Sports</h5>
+        <ul>
+          <li><a href="#bestsellers" onclick="filterBySport('Football')">Football &amp; Soccer</a></li>
+          <li><a href="#bestsellers" onclick="filterBySport('Basketball')">Basketball</a></li>
+          <li><a href="#bestsellers" onclick="filterBySport('Running')">Running &amp; Track</a></li>
+          <li><a href="#bestsellers" onclick="filterBySport('Fitness')">Gym &amp; Weights</a></li>
+          <li><a href="#bestsellers" onclick="filterBySport('Tennis')">Tennis &amp; Padel</a></li>
+          <li><a href="#bestsellers" onclick="filterBySport('Combat')">Combat Sports</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Customer Support</h5>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="showToast('Athlete Help Desk is available 24/7. Call 1-800-VOLT-PRO.')">Help Center</a></li>
+          <li><a href="javascript:void(0)" onclick="openTrackerModal()">Order Tracking</a></li>
+          <li><a href="javascript:void(0)" onclick="showToast('Free 2-day delivery applied on all orders over $99.')">Shipping &amp; Delivery</a></li>
+          <li><a href="javascript:void(0)" onclick="showToast('Enjoy 30 days hassle-free returns & 2-year warranty on all gear.')">Returns &amp; Warranty</a></li>
+          <li><a href="javascript:void(0)" onclick="openSizeGuide()">Pro Size Guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="showToast('VOLT GEAR was founded in 2020 by world-class coaches and engineers.')">About VOLT</a></li>
+          <li><a href="#athletes">Sponsored Athletes</a></li>
+          <li><a href="javascript:void(0)" onclick="showToast('We are hiring product designers & athletes! Join our squad.')">Careers</a></li>
+          <li><a href="javascript:void(0)" onclick="showToast('Flagship stores in New York, London, Tokyo, and Sydney.')">Brand Stores</a></li>
+          <li><a href="javascript:void(0)" onclick="showToast('Your privacy is 100% protected with encrypted transactions.')">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Why Choose VOLT</h5>
+        <ul class="foot-service">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg> Free delivery over $99</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg> 30-day trial guarantee</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 3v6c0 5-3.4 8.7-8 11-4.6-2.3-8-6-8-11V5z"/></svg> 100% verified authentic</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11a9 9 0 0 1 18 0v6a2 2 0 0 1-2 2h-1v-7h3M3 11h3v7H5a2 2 0 0 1-2-2z"/></svg> 24/7 dedicated support</li>
+        </ul>
+      </div>     
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 VOLT Gear Inc. All rights reserved.</span>
+      <div class="pay-icons">
+        <span>VISA</span><span>MASTERCARD</span><span>APPLE PAY</span><span>PAYPAL</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ================== DRAWERS & MODALS MARKUP ================== -->
+
+<!-- Quick View Modal -->
+<div class="modal-backdrop" id="quickModalBackdrop" onclick="if(event.target===this) closeQuickView()">
+  <div class="quick-modal">
+    <button class="modal-close" onclick="closeQuickView()">&times;</button>
+    <div class="quick-modal-grid">
+      <div class="quick-modal-img-col">
+        <div class="quick-modal-img">
+          <img id="quickModalMainImg" src="" alt="Product Image">
+        </div>
+        <div class="quick-modal-thumbs" id="quickModalThumbs"></div>
+      </div>
+      <div class="quick-modal-body">
+        <div>
+          <span class="eyebrow" id="quickModalCategory">Category</span>
+          <h2 id="quickModalTitle" style="font-family:var(--font-display);font-size:24px;margin:8px 0 10px;text-transform:uppercase;">Product Name</h2>
+          <div class="stars" id="quickModalStars">
+            <!-- Stars rendered dynamically -->
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+            <span class="price" id="quickModalPrice" style="font-size:24px;">$0</span>
+            <span id="quickModalOldPrice" style="color:var(--grey-dim);text-decoration:line-through;font-size:16px;"></span>
+            <span id="quickModalBadge" class="pcard tag" style="position:static;">NEW</span>
+          </div>
+          <p id="quickModalDesc" style="font-size:13.5px;color:var(--grey);line-height:1.6;margin-bottom:16px;">Description text.</p>
+          
+          <div class="specs-list" id="quickModalSpecs">
+            <!-- Specs injected dynamically -->
+          </div>
+
+          <div class="size-selector">
+            <span>Select Size / Option:</span>
+            <div class="size-options" id="quickModalSizes">
+              <!-- Sizes injected dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="qty-row">
+            <span style="font-size:12px;font-weight:700;color:var(--grey);text-transform:uppercase;">Quantity:</span>
+            <div class="qty-stepper">
+              <button onclick="adjustQuickQty(-1)">-</button>
+              <span id="quickModalQty">1</span>
+              <button onclick="adjustQuickQty(1)">+</button>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:12px;">
+            <button class="btn btn-solid" style="flex:1;" onclick="addQuickViewToCart()">Add to Bag</button>
+            <button class="btn btn-outline" style="flex:1;" onclick="buyNowFromQuickView()">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Slide-in Cart Drawer -->
+<div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2.2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+      <h3>Athlete Bag (<span id="cartTotalItemsCount">0</span>)</h3>
+    </div>
+    <button class="modal-close" style="position:static;" onclick="closeCart()">&times;</button>
+  </div>
+
+  <div class="shipping-progress">
+    <div id="shippingMessage">Add $99.00 more for FREE Express Shipping!</div>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="shippingProgressBar" style="width:0%;"></div>
+    </div>
+  </div>
+
+  <div class="cart-items" id="cartItemsContainer">
+    <!-- Injected dynamically -->
+  </div>
+
+  <div class="cart-footer">
+    <div class="promo-box">
+      <input type="text" id="couponInput" placeholder="Promo code (e.g. VOLT10)">
+      <button onclick="applyCoupon()">Apply</button>
+    </div>
+    <div id="couponAppliedBadge" style="display:none;font-size:11.5px;color:var(--lime);font-weight:700;margin-bottom:8px;">
+      ✓ Promo Applied: <span id="couponName"></span> (<span id="couponDiscountText"></span>)
+    </div>
+
+    <div class="cart-summary-line">
+      <span>Subtotal</span>
+      <span id="cartSubtotal">$0.00</span>
+    </div>
+    <div class="cart-summary-line" id="discountLine" style="display:none;color:var(--lime);">
+      <span>Promo Discount</span>
+      <span id="cartDiscount">-$0.00</span>
+    </div>
+    <div class="cart-summary-line">
+      <span>Express Shipping</span>
+      <span id="cartShipping">Free</span>
+    </div>
+    <div class="cart-summary-line total">
+      <span>Total</span>
+      <span id="cartGrandTotal">$0.00</span>
+    </div>
+
+    <button class="btn btn-solid" style="width:100%;margin-top:14px;" onclick="openCheckout()">Proceed to Checkout</button>
+  </div>
+</div>
+
+<!-- Wishlist Drawer -->
+<div class="cart-drawer-overlay" id="wishlistOverlay" onclick="closeWishlist()"></div>
+<div class="wish-drawer" id="wishlistDrawer">
+  <div class="cart-head">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#ff3366" stroke="#ff3366" stroke-width="2.2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+      <h3>Saved Gear (<span id="wishTotalItemsCount">0</span>)</h3>
+    </div>
+    <button class="modal-close" style="position:static;" onclick="closeWishlist()">&times;</button>
+  </div>
+  <div class="cart-items" id="wishlistItemsContainer">
+    <!-- Injected dynamically -->
+  </div>
+  <div class="cart-footer">
+    <button class="btn btn-solid" style="width:100%;" onclick="moveAllWishlistToCart()">Add All to Bag</button>
+  </div>
+</div>
+
+<!-- Search Spotlight Modal -->
+<div class="modal-backdrop" id="searchModal" onclick="if(event.target===this) closeSearchModal()">
+  <div class="search-modal-box">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <span class="eyebrow"><span class="eyebrow-icon">⚡</span> Quick Equipment Search</span>
+      <button class="modal-close" style="position:static;" onclick="closeSearchModal()">&times;</button>
+    </div>
+    <div class="search-input-wrap">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--lime)" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="searchInput" placeholder="Search cleats, dumbbells, running shoes, tennis, tech..." oninput="handleLiveSearch(this.value)">
+    </div>
+    <div class="search-tags">
+      <span class="search-tag" onclick="fillSearch('Cleats')">⚡ Cleats</span>
+      <span class="search-tag" onclick="fillSearch('Dumbbell')">⚡ Dumbbell</span>
+      <span class="search-tag" onclick="fillSearch('Carbon')">⚡ Carbon Shoes</span>
+      <span class="search-tag" onclick="fillSearch('Boxing')">⚡ Boxing Gloves</span>
+      <span class="search-tag" onclick="fillSearch('Racket')">⚡ Tour Racket</span>
+      <span class="search-tag" onclick="fillSearch('GPS')">⚡ GPS Watch</span>
+    </div>
+    <div class="search-results" id="searchResultsContainer">
+      <!-- Search results dynamically rendered -->
+    </div>
+  </div>
+</div>
+
+<!-- Account / Authentication Modal -->
+<div class="modal-backdrop" id="authModal" onclick="if(event.target===this) closeAuthModal()">
+  <div class="auth-modal-box">
+    <button class="modal-close" onclick="closeAuthModal()">&times;</button>
+    <div class="auth-tabs">
+      <div class="auth-tab active" id="tabLogin" onclick="switchAuthTab('login')">Sign In</div>
+      <div class="auth-tab" id="tabRegister" onclick="switchAuthTab('register')">Register</div>
+      <div class="auth-tab" id="tabProfile" style="display:none;" onclick="switchAuthTab('profile')">Athlete Profile</div>
+    </div>
+
+    <!-- Login Form -->
+    <form class="auth-form" id="loginForm" onsubmit="handleAuthLogin(event)">
+      <div>
+        <label style="font-size:11.5px;color:var(--grey);font-weight:700;display:block;margin-bottom:4px;">EMAIL ADDRESS</label>
+        <input type="email" id="loginEmail" required placeholder="athlete@voltgear.com">
+      </div>
+      <div>
+        <label style="font-size:11.5px;color:var(--grey);font-weight:700;display:block;margin-bottom:4px;">PASSWORD</label>
+        <input type="password" id="loginPassword" required placeholder="••••••••">
+      </div>
+      <button class="btn btn-solid" type="submit" style="margin-top:10px;">Sign In to VOLT</button>
+      <button type="button" class="btn btn-outline" onclick="demoLogin()" style="margin-top:4px;font-size:12px;">Quick Demo Sign In</button>
+    </form>
+
+    <!-- Register Form -->
+    <form class="auth-form" id="registerForm" style="display:none;" onsubmit="handleAuthRegister(event)">
+      <div>
+        <label style="font-size:11.5px;color:var(--grey);font-weight:700;display:block;margin-bottom:4px;">FULL NAME</label>
+        <input type="text" id="regName" required placeholder="Marcus Vance">
+      </div>
+      <div>
+        <label style="font-size:11.5px;color:var(--grey);font-weight:700;display:block;margin-bottom:4px;">EMAIL ADDRESS</label>
+        <input type="email" id="regEmail" required placeholder="marcus@athlete.com">
+      </div>
+      <div>
+        <label style="font-size:11.5px;color:var(--grey);font-weight:700;display:block;margin-bottom:4px;">PRIMARY SPORT</label>
+        <select id="regSport">
+          <option value="Football">Football / Soccer</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Running">Running & Track</option>
+          <option value="Fitness">Fitness & Weights</option>
+          <option value="Combat">Combat Sports</option>
+          <option value="Tennis">Tennis & Racket</option>
+          <option value="Cycling">Cycling</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:11.5px;color:var(--grey);font-weight:700;display:block;margin-bottom:4px;">PASSWORD</label>
+        <input type="password" id="regPassword" required placeholder="••••••••">
+      </div>
+      <button class="btn btn-solid" type="submit" style="margin-top:10px;">Create Athlete Account</button>
+    </form>
+
+    <!-- Profile View (when logged in) -->
+    <div id="profileView" style="display:none;text-align:center;">
+      <div style="width:70px;height:70px;border-radius:50%;background:var(--lime);color:#0b0d0c;font-size:28px;font-weight:900;display:inline-flex;align-items:center;justify-content:center;margin-bottom:12px;" id="profileAvatar">
+        MV
+      </div>
+      <h3 id="profileName" style="font-family:var(--font-display);font-size:20px;text-transform:uppercase;">Marcus Vance</h3>
+      <p id="profileEmail" style="color:var(--grey);font-size:13px;margin-bottom:16px;">marcus@athlete.com</p>
+      
+      <div style="background:var(--bg-panel-2);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:20px;text-align:left;">
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:13px;">
+          <span>Athlete Level:</span> <strong style="color:var(--lime);">PRO ELITE</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:8px;font-size:13px;">
+          <span>VOLT Points:</span> <strong style="color:var(--white);">1,250 PTS ($25 Value)</strong>
+        </div>
+        <div style="display:flex;justify-content:space-between;font-size:13px;">
+          <span>Active Orders:</span> <strong style="color:var(--lime);" onclick="openTrackerModal();closeAuthModal();" style="cursor:pointer;">1 In Transit &rarr;</strong>
+        </div>
+      </div>
+      <button class="btn btn-outline" style="width:100%;" onclick="handleSignOut()">Sign Out</button>
+    </div>
+  </div>
+</div>
+
+<!-- Multi-Step Checkout Modal -->
+<div class="modal-backdrop" id="checkoutModal" onclick="if(event.target===this) closeCheckout()">
+  <div class="checkout-modal-box">
+    <button class="modal-close" onclick="closeCheckout()">&times;</button>
+    
+    <div id="checkoutStepContainer">
+      <div class="checkout-steps">
+        <div class="checkout-step-pill active" id="stepPill1">1. Shipping</div>
+        <div class="checkout-step-pill" id="stepPill2">2. Payment</div>
+        <div class="checkout-step-pill" id="stepPill3">3. Review</div>
+      </div>
+
+      <form id="checkoutForm" onsubmit="handlePlaceOrder(event)">
+        <!-- Step 1: Shipping Info -->
+        <div id="checkoutStep1">
+          <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;text-transform:uppercase;">Delivery Address</h3>
+          <div class="checkout-grid">
+            <div>
+              <label style="font-size:11.5px;color:var(--grey);font-weight:700;">FIRST NAME</label>
+              <input type="text" id="chkFirst" required placeholder="Alex" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+            </div>
+            <div>
+              <label style="font-size:11.5px;color:var(--grey);font-weight:700;">LAST NAME</label>
+              <input type="text" id="chkLast" required placeholder="Morgan" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+            </div>
+          </div>
+          <div style="margin-top:12px;">
+            <label style="font-size:11.5px;color:var(--grey);font-weight:700;">STREET ADDRESS</label>
+            <input type="text" id="chkAddress" required placeholder="742 Evergreen Terrace, Suite 100" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+          </div>
+          <div class="checkout-grid" style="margin-top:12px;">
+            <div>
+              <label style="font-size:11.5px;color:var(--grey);font-weight:700;">CITY</label>
+              <input type="text" id="chkCity" required placeholder="New York" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+            </div>
+            <div>
+              <label style="font-size:11.5px;color:var(--grey);font-weight:700;">ZIP / POSTAL CODE</label>
+              <input type="text" id="chkZip" required placeholder="10001" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+            </div>
+          </div>
+          <div style="margin-top:12px;">
+            <label style="font-size:11.5px;color:var(--grey);font-weight:700;">PHONE NUMBER (FOR DISPATCH UPDATES)</label>
+            <input type="tel" id="chkPhone" required placeholder="+1 (555) 019-2834" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+          </div>
+          <button type="button" class="btn btn-solid" style="width:100%;margin-top:20px;" onclick="goToCheckoutStep(2)">Continue to Payment &rarr;</button>
+        </div>
+
+        <!-- Step 2: Payment -->
+        <div id="checkoutStep2" style="display:none;">
+          <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;text-transform:uppercase;">Payment Method</h3>
+          <div style="display:flex;gap:10px;margin-bottom:16px;">
+            <button type="button" class="btn btn-outline active" style="flex:1;border-color:var(--lime);color:var(--lime);">💳 Card</button>
+            <button type="button" class="btn btn-outline" style="flex:1;" onclick="showToast('Apple Pay selected.')">🍏 Apple Pay</button>
+            <button type="button" class="btn btn-outline" style="flex:1;" onclick="showToast('PayPal selected.')">🅿️ PayPal</button>
+          </div>
+          <div>
+            <label style="font-size:11.5px;color:var(--grey);font-weight:700;">CARD NUMBER</label>
+            <input type="text" required placeholder="4242 •••• •••• 4242" value="4242 8821 9012 4242" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+          </div>
+          <div class="checkout-grid" style="margin-top:12px;">
+            <div>
+              <label style="font-size:11.5px;color:var(--grey);font-weight:700;">EXPIRY (MM/YY)</label>
+              <input type="text" required placeholder="12/28" value="08/29" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+            </div>
+            <div>
+              <label style="font-size:11.5px;color:var(--grey);font-weight:700;">CVC / CVV</label>
+              <input type="password" required placeholder="888" value="888" style="width:100%;background:var(--bg-panel-2);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--white);margin-top:4px;">
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;margin-top:20px;">
+            <button type="button" class="btn btn-outline" style="flex:1;" onclick="goToCheckoutStep(1)">&larr; Back</button>
+            <button type="button" class="btn btn-solid" style="flex:2;" onclick="goToCheckoutStep(3)">Review Order &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Order Review -->
+        <div id="checkoutStep3" style="display:none;">
+          <h3 style="font-family:var(--font-display);font-size:18px;margin-bottom:14px;text-transform:uppercase;">Order Summary</h3>
+          <div id="checkoutSummaryList" style="max-height:180px;overflow-y:auto;background:var(--bg-panel-2);border:1px solid var(--line);border-radius:8px;padding:12px;margin-bottom:14px;">
+            <!-- Rendered dynamically -->
+          </div>
+          <div style="background:var(--bg-panel-2);border:1px solid var(--line);border-radius:8px;padding:14px;font-size:13px;margin-bottom:16px;">
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+              <span>Subtotal</span> <strong id="chkSubtotal">$0.00</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+              <span>Shipping</span> <strong id="chkShipping">FREE</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;margin-bottom:4px;color:var(--lime);">
+              <span>Discount</span> <strong id="chkDiscount">-$0.00</strong>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:16px;border-top:1px dashed var(--line-light);padding-top:8px;margin-top:8px;">
+              <span>Total to Pay</span> <strong id="chkTotal" style="color:var(--lime);">$0.00</strong>
+            </div>
+          </div>
+          <div style="display:flex;gap:10px;">
+            <button type="button" class="btn btn-outline" style="flex:1;" onclick="goToCheckoutStep(2)">&larr; Back</button>
+            <button type="submit" class="btn btn-solid" id="placeOrderBtn" style="flex:2;">⚡ Authorize &amp; Pay</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Success Screen -->
+    <div id="orderSuccessScreen" style="display:none;" class="order-success-box">
+      <div class="order-success-icon">✓</div>
+      <h2 style="font-family:var(--font-display);font-size:26px;text-transform:uppercase;margin-bottom:6px;">ORDER CONFIRMED!</h2>
+      <p style="color:var(--grey);font-size:14px;margin-bottom:18px;">
+        Thank you for equipping with VOLT. Your order <strong id="successOrderId" style="color:var(--lime);">VOLT-89241</strong> has been placed and is being prepped for express dispatch.
+      </p>
+      <div style="background:var(--bg-panel-2);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:20px;text-align:left;font-size:13px;">
+        <div style="margin-bottom:6px;"><strong>Estimated Delivery:</strong> In 2-3 Business Days</div>
+        <div style="margin-bottom:6px;"><strong>Courier:</strong> FedEx Pro Express Tracked</div>
+        <div><strong>Confirmation Email:</strong> Sent with full tracking link.</div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <button class="btn btn-solid" style="flex:1;" onclick="closeCheckout();openTrackerModal();">Track This Order</button>
+        <button class="btn btn-outline" style="flex:1;" onclick="closeCheckout();">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Order Tracker Modal -->
+<div class="modal-backdrop" id="trackerModal" onclick="if(event.target===this) closeTrackerModal()">
+  <div class="tracker-modal-box">
+    <button class="modal-close" onclick="closeTrackerModal()">&times;</button>
+    <span class="eyebrow"><span class="eyebrow-icon">⚡</span> Live Dispatch Tracker</span>
+    <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0 16px;text-transform:uppercase;">Track Your Gear</h3>
+    <div style="display:flex;gap:8px;">
+      <input type="text" id="trackOrderIdInput" placeholder="Enter Order ID (e.g. VOLT-89241)" value="VOLT-89241" style="flex:1;background:var(--bg-panel-2);border:1px solid var(--line);border-radius:8px;padding:10px 14px;color:var(--white);font-size:13px;outline:none;">
+      <button class="btn btn-solid btn-sm" onclick="searchTrackOrder()">Track</button>
+    </div>
+
+    <div class="timeline" id="trackingTimeline">
+      <div class="timeline-item done">
+        <div class="timeline-dot"></div>
+        <h5 style="font-size:13px;font-weight:700;">Order Confirmed &amp; Payment Verified</h5>
+        <p style="font-size:11.5px;color:var(--grey-dim);">Today, 09:30 AM — Warehouse #04 Hub</p>
+      </div>
+      <div class="timeline-item done">
+        <div class="timeline-dot"></div>
+        <h5 style="font-size:13px;font-weight:700;">Custom Inspected &amp; Packed</h5>
+        <p style="font-size:11.5px;color:var(--grey-dim);">Today, 01:15 PM — Shock-proof packaging applied</p>
+      </div>
+      <div class="timeline-item active">
+        <div class="timeline-dot"></div>
+        <h5 style="font-size:13px;font-weight:700;color:var(--lime);">In Transit / Out for Express Delivery</h5>
+        <p style="font-size:11.5px;color:var(--grey);">Driver Marcus V. on final route with FedEx Express</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <h5 style="font-size:13px;font-weight:700;color:var(--grey-dim);">Delivered &amp; Signed</h5>
+        <p style="font-size:11.5px;color:var(--grey-dim);">Estimated Tomorrow before 5:00 PM</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Size Guide Modal -->
+<div class="modal-backdrop" id="sizeGuideModal" onclick="if(event.target===this) closeSizeGuide()">
+  <div class="size-guide-box">
+    <button class="modal-close" onclick="closeSizeGuide()">&times;</button>
+    <span class="eyebrow"><span class="eyebrow-icon">⚡</span> Pro Fit Standards</span>
+    <h3 style="font-family:var(--font-display);font-size:22px;margin:8px 0 16px;text-transform:uppercase;">Athlete Size Chart</h3>
+    
+    <table class="guide-table">
+      <thead>
+        <tr><th>US Size</th><th>UK Size</th><th>EU Size</th><th>Foot Length (CM)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>7.0</td><td>6.0</td><td>40.0</td><td>25.0 cm</td></tr>
+        <tr><td>8.0</td><td>7.0</td><td>41.0</td><td>26.0 cm</td></tr>
+        <tr><td>9.0</td><td>8.0</td><td>42.5</td><td>27.0 cm</td></tr>
+        <tr><td>10.0</td><td>9.0</td><td>44.0</td><td>28.0 cm</td></tr>
+        <tr><td>11.0</td><td>10.0</td><td>45.0</td><td>29.0 cm</td></tr>
+        <tr><td>12.0</td><td>11.0</td><td>46.0</td><td>30.0 cm</td></tr>
+      </tbody>
+    </table>
+
+    <div style="background:var(--bg-panel-2);border-radius:8px;padding:12px;font-size:12px;color:var(--grey);line-height:1.5;">
+      💡 <strong>Pro Tip:</strong> For tournament cleats and running spikes, we recommend choosing your exact snug measurement. For gym trainers, select half a size up for toe splay.
+    </div>
+  </div>
+</div>
+
+<!-- Toast Container -->
+<div id="toastContainer"></div>
+
+<!-- Scroll To Top Button -->
+<button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()" aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+
+<!-- ================== SCRIPT LOGIC ================== -->
+<script src="js/script.js"></script>
+</body>
+</html>
